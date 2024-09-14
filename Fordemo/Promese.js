@@ -14,18 +14,18 @@
 //     console.log(error);
 // });
 
-let mypromises = new Promise((resolve,reject) => {
-    let learn = true;
+let mypromise = new Promise( (resolve,reject) => {
+    let learn = false;
 
     if(learn){
-        resolve("this is resolve")
+        resolve("This is true")
     }else{
-        reject("this is rejected")
+        reject("This is false")
     }
-});
+})
 
-mypromises.then( (result) => {
-        console.log(result);
-}).catch ( (error) => {
-    console.log(error);
-});
+mypromise.then( (resolve) => {
+    console.log(resolve);    
+}).catch( (reject)=> {
+    console.log("this is rejected message : ",reject);    
+})
